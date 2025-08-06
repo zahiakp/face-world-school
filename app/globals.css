@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme {
+  --color-green: #0D2E2C;
+  --color-green-200: #155647;
+  --color-green-300: #198057;
+  --color-green-400: #1BAC5A;
+  --color-green-500: #1BDA4E;
+  --color-green-600: #36ED48;
+  --color-green-700: #65F55B;
+  --color-green-800: #9FFB83;
+  --color-green-900: #CEFFAD;
+  --color-green-light: #CEFFAE;
+}
