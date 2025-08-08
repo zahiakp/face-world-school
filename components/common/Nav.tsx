@@ -34,7 +34,7 @@ const Nav = React.memo(({ active }: NavProps) => {
   }, []);
 
   return (
-    <nav className="w-full px-10 bg-white text-gray-800 sticky top-0 z-10">
+    <nav className="w-full px-10 bg-white text-gray-800 sticky top-0 z-10 shadow-sm">
       <div className="w-full max-w-[1200px] h-[90px] md:h-[100px] flex items-center justify-between mx-auto">
         <Link href="/">
           <img
@@ -191,11 +191,11 @@ export const NAV_ITEMS = [
   {
     label: "About",
     items: [
-      { label: "Our Story", path: "" },
-      { label: "Vision & Mission", path: "" },
-      { label: "Our Leadership", path: "" },
-      { label: "The FACE Foundation", path: "" },
-      { label: "Our Philosophy ", path: "" },
+      { label: "Our Story", path: "/ourstory" },
+      { label: "Vision & Mission", path: "/vision&mission" },
+      { label: "Our Leadership", path: "/leadership" },
+      { label: "FACE Foundation", path: "/facefoundation" },
+      { label: "Our Philosophy ", path: "/corepillars" },
       { label: "Academic Council", path: "" },
       { label: "FACE IAS Academy", path: "" },
       { label: "Face study circle", path: "" },
@@ -204,8 +204,8 @@ export const NAV_ITEMS = [
   {
     label: "Programs",
     items: [
-      { label: "Programs Overview", path: "" },
-      { label: "What We Provide", path: "" },
+      { label: "Programs Overview", path: "/programs" },
+      { label: "What We Provide", path: "/whatprovide" },
       { label: "Foundation Programs", path: "" },
       { label: "FACE Entrance Coaching", path: "" },
     ],

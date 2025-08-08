@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${justSans.className} antialiased`}
+        className={` ${justSans.className} antialiased bg-white`}
       >
         <PageLoader/><PrimeReactProvider>{children}</PrimeReactProvider>
       </body>
