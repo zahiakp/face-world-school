@@ -74,7 +74,7 @@ function Footer() {
                     className="flex text-base group items-center hover:translate-x-0 -translate-x-2 gap-2 text-black transition-all duration-200  hover:font-semibold focus:text-primary"
                   >
                     {" "}
-                    <span className="group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 duration-300 text-lime-600 opacity-0">
+                    <span className="group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 duration-300 text-green-400/70 opacity-0">
                       <IoMdArrowForward />
                     </span>
                     {item.label}{" "}
@@ -107,7 +107,7 @@ function Footer() {
                     className="flex text-base group items-center hover:translate-x-0 -translate-x-2 gap-2 text-black transition-all duration-200  hover:font-semibold focus:text-primary"
                   >
                     {" "}
-                    <span className="group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 duration-300 text-lime-600 opacity-0">
+                    <span className="group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 duration-300 text-green-400/70 opacity-0">
                       <IoMdArrowForward />
                     </span>
                     {item.label}{" "}
@@ -121,28 +121,28 @@ function Footer() {
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               CONTACT
             </p>
-            <p className="mt-5 font-semibold">
-              Sukoon Edu Foundation
+            <p className="mt-5 font-semibold text-gray-800">
+              FACE World Leadership School
               {/* , New Delhi, India */}
             </p>
-            <a href="" className="flex items-center gap-2 mt-2">
-              <HiOutlineMail className="text-lime-600" />
-              <p>connect@mysukoon.in</p>
+            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+              <HiOutlineMail className="text-green-400/70" />
+              <p>connect@domain.in</p>
             </a>
-            <a href="" className="flex items-center gap-2 mt-2">
-              <IoMdCall className="text-lime-600" />
-              <p>+91- 9645900096</p>
+            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+              <IoMdCall className="text-green-400/70" />
+              <p>+91- 0000000</p>
             </a>
-            <a href="" className="flex items-center gap-2 mt-2">
-              <FiGlobe className="text-lime-600" />
-              <p>www.mysukoon.in</p>
+            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+              <FiGlobe className="text-green-400/70" />
+              <p>www.domain.in</p>
             </a>
             <div className="flex mt-5">
               {SOCIAL_LINKS.map((link: any, index: number) => (
                 <a
                   key={index}
                   href={link.link}
-                  className="bg-gradient-to-tr from-lime-600 to-lime-500 text-white duration-300 p-2 rounded-[10px] mr-2 hover:scale-[1.1]"
+                  className="bg-green-300 text-white duration-300 p-2 rounded-[10px] mr-2 hover:scale-[1.1]"
                 >
                   {link.icon}
                 </a>
@@ -181,7 +181,6 @@ function Footer() {
         </div>
 
         <hr className="mt-16 mb-8 border-zinc-300/60" />
-
         <div className="flex items-center justify-center md:justify-between">
           <p className="text-sm text-center text-gray-600">
             © 2025 FACE World Leadership School
@@ -220,7 +219,7 @@ function Footer() {
             </a>
           </div> */}
           <a href="https://abaqas.i" className="text-sm my-2 text-gray-700 hover:underline">
-            ⚡ Abaqas.in
+            ⚡ abaqas.in
           </a>
         </div>
       </div>

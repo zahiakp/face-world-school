@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -14,3 +15,13 @@
   --color-green-900: #CEFFAD;
   --color-green-light: #CEFFAE;
 }
+
+.imperial-script {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* main{
+  @apply bg-white text-gray-800
+} */
