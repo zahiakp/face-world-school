@@ -210,7 +210,7 @@ export const NAV_ITEMS = [
       { label: "FACE Entrance Coaching", path: "" },
     ],
   },
-  { label: "Impact" ,path:""},
+  { label: "Impact" ,path:"/impact"},
   {
     label: "Flagship Initiatives",
     items: [
