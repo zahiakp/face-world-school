@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Next.js cache
+.next/
+.next/cache/
+
+# Yarn cache
+.yarn/cache/
+
+# npm cache
+.npm/
+
+# Turbo or SWC cache
+.turbo/
+.swc/
