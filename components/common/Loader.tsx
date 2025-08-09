@@ -6,7 +6,7 @@ const PageLoader = () => {
     return (
 <ProgressBar
         height="4.5px"
-        color={"#0D2E2C"}
+        color={"#CEFFAE"}
         options={{ showSpinner: false }}
         shallowRouting
       />
