@@ -1,11 +1,13 @@
 import UserLayout from '@/components/layout/UserLayout'
 import React from 'react'
 import Hero from './Hero'
+import Content from './Content'
 
 function page() {
   return (
     <UserLayout>
       <Hero/>
+      <Content/>
     </UserLayout>
   )
 }
