@@ -204,7 +204,7 @@ export const NAV_ITEMS = [
   {
     label: "Programs",
     items: [
-      { label: "Programs Overview", path: "/programs" },
+      { label: "Programs Overview", path: "/programoverview" },
       { label: "What We Provide", path: "/whatprovide" },
       { label: "Foundation Programs", path: "" },
       { label: "FACE Entrance Coaching", path: "" },
@@ -226,7 +226,7 @@ export const NAV_ITEMS = [
   {
     label: "Life at FACE",
     items: [
-      { label: "Programs", path: "" },
+      { label: "Programs", path: "/programs" },
       { label: "Facilities ", path: "" },
       { label: "INSAF", path: "" },
     ],
