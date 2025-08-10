@@ -25,3 +25,22 @@
 /* main{
   @apply bg-white text-gray-800
 } */
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infiniteScroll 35s linear infinite;
+}
+
+.mask-fade {
+  mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+}
