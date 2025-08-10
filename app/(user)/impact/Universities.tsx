@@ -64,7 +64,7 @@ function Universities() {
         "University of Sharjah.png",
     ]
   return (
-    <section className='w-full bg-white relative overflow-hidden'>
+    <section className='w-full bg-white relative'>
         <main className='w-[90%] grid-cols-8 flex text-gray-800 gap-14 max-w-[1200px] mx-auto py-20 z-[2] relative'>
          <div className='w-[33%]'><h6 className="text-5xl md:text-6xl text-green font-medium ">
                            <TextAnimate animation="blurInUp" by="word">
@@ -92,7 +92,7 @@ function Universities() {
                                                         <p className='w-14 h-14 rounded-full bg-gray-100 font-medium border-4 border-gray-300 flex items-center justify-center'>+3</p>
                          </div>}
     </main>
-    <LogoStroke className="text-green blur-md z-0 w-[480px] h-auto absolute -bottom-40 left-[12%] rotate-12"/>
+    {/* <LogoStroke className="text-green blur-md z-0 w-[480px] h-auto absolute -bottom-40 left-[12%] rotate-12"/> */}
     </section>
   )
 }
