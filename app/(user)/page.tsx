@@ -6,7 +6,9 @@ import Stages from "@/components/Home/Stages";
 
 export default function Home() {
   return (
-    <UserLayout>
+    <UserLayout
+      title="FACE World Leadership School"
+      description="FACE World Leadership School, a residential institution in Kerala, is dedicated to nurturing the">
       <Hero/>
       <Stages/>
       <Overview/>

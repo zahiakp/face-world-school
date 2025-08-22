@@ -192,7 +192,7 @@ export const NAV_ITEMS = [
     label: "About",
     items: [
       { label: "Our Story", path: "/ourstory" },
-      { label: "Vision & Mission", path: "/vision&mission" },
+      { label: "Vision & Mission", path: "/vision-mission" },
       { label: "Our Leadership", path: "/leadership" },
       { label: "FACE Foundation", path: "/facefoundation" },
       { label: "Our Philosophy ", path: "/corepillars" },
@@ -228,10 +228,11 @@ export const NAV_ITEMS = [
     items: [
       { label: "Programs", path: "/programs" },
       { label: "Facilities ", path: "" },
+      { label: "People ", path: "" },
       { label: "INSAF", path: "" },
     ],
   },
   { label: "Admissions", path: "" },
-  { label: "Contact Us", path: "" },
+  { label: "Contact Us", path: "/contact" },
   // { label: "Support Our Mission", path: "" },
 ];

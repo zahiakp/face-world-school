@@ -10,18 +10,18 @@ function Footer() {
   const SOCIAL_LINKS = [
     {
       icon: <AiFillInstagram />,
-      link: "https://www.instagram.com/mysukoon.in?igsh=ejhubHRlMGJ6dmZo",
+      link: "https://www.instagram.com/face.campus/",
     },
     {
       icon: <RiWhatsappFill />,
-      link: "https://wa.me/+919645900096?text=Hello%20Sukoon%20Edu%20Village",
+      link: "https://wa.me/+919107644644?text=Hello%20FACE%20School",
     },
     {
       icon: <TiSocialFacebook />,
-      link: "https://www.facebook.com/share/12LAMTKXN79/?mibextid=wwXIfr",
+      link: "https://www.facebook.com/facecampus.in",
     },
     // { icon: <FaXTwitter />, link: "" },
-    { icon: <FaYoutube />, link: "https://youtu.be/qvimT91m6V0" },
+    { icon: <FaYoutube />, link: "https://www.youtube.com/channel/UCf4fP14V8lTfV4O3T4tofzw/featured" },
   ];
   return (
     <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
@@ -125,17 +125,21 @@ function Footer() {
               FACE World Leadership School
               {/* , New Delhi, India */}
             </p>
-            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+            <a href="mailto:info@faceschool.in" className="flex items-center gap-2 text-gray-800 mt-2">
               <HiOutlineMail className="text-green-400/70" />
-              <p>connect@domain.in</p>
+              <p>info@faceschool.in</p>
             </a>
             <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
               <IoMdCall className="text-green-400/70" />
-              <p>+91- 0000000</p>
+              <p>+919107644644</p>
+            </a>
+            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+              <IoMdCall className="text-green-400/70" />
+              <p>+918129939881</p>
             </a>
             <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
               <FiGlobe className="text-green-400/70" />
-              <p>www.domain.in</p>
+              <p>www.faceschool.in</p>
             </a>
             <div className="flex mt-5">
               {SOCIAL_LINKS.map((link: any, index: number) => (
