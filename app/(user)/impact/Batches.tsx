@@ -12,7 +12,7 @@ const batchData:any = {
     "2025": Batch2025,
 };
 
-const StudentCard = ({ student }:{student:any}) => (
+export const StudentCard = ({ student }:{student:any}) => (
     <div className='p-3 text-gray-800'>
         <div className='h-32 rounded-xl bg-green-light/50'></div> {/* Using a default tailwind color */}
         <div>
@@ -37,7 +37,7 @@ const StatItem = ({ value, label }:any) => (
     </div>
 );
 
-function BatchOverviewCard({ batchData }:any) {
+export function BatchOverviewCard({ batchData }:any) {
     const { year, title, stats, highlights } = batchData;
 
     return (

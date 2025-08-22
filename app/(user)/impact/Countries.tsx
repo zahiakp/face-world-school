@@ -25,7 +25,7 @@ function Countries() {
                                 {/* Circular Flag */}
                                 <div className="flag-hover cursor-pointer">
                                     <div className="relative">
-                                        <div className="w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-colors duration-300">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-md bg-white transition-colors duration-300">
                                             <img
                                                 src={`/images/countries/${country.flag}`}
                                                 alt={`${country.name} flag`}
