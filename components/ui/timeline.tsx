@@ -45,7 +45,7 @@ export const Timeline = ({ data ,title}: { data: TimelineEntry[],title?:string }
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           Explore the scholarship milestones and achievements of our batches from 2021 to 2025.
         </p> */}
-        {title && <div className="max-w-[700px]"><TextAnimate animation="blurInUp" by="word" className="text-5xl md:text-6xl text-green font-medium">
+        {title && <div className="max-w-[700px]"><TextAnimate animation="blurInUp" by="word" className="text-4xl md:text-6xl text-green font-medium">
                                    {title}
                                    </TextAnimate>
       </div>}</div>

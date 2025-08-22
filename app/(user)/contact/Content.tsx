@@ -37,7 +37,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
 const ContactInfoSection: React.FC = () => {
   return (
     <div className="bg-green-light/50 py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[85%] max-w-[1200px] mx-auto">
         <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
           Let us know how we can help
         </h2>

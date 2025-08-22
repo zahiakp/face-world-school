@@ -79,7 +79,7 @@ const pagination = {
   {SLIDES.map((slide: any, i: number) => (
     <SwiperSlide key={i}>
       <div
-        className={`w-[100%] h-[650px] bg-gradient-to-br bg-green relative flex items-center justify-between px-[10%]`}
+        className={`w-[100%] h-[650px] z-[1] bg-gradient-to-br bg-green relative flex items-center justify-between px-[10%]`}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -87,13 +87,12 @@ const pagination = {
       >
           <WordPullUp words={slide.title} className="text-6xl w-full md:w-2/4 text-green-light group leading-[55px] md:text-8xl md:leading-[95px] md:text-left font-normal" show={show ? 'show' : "hidden"} />
       </div>
-          <img src={`/images/${slide.image}`} className="absolute right-0 top-0 h-[800px] blur-sm" />
+          <img src={`/images/${slide.image}`} className="absolute z-[0] hidden md:block right-0 top-0 h-[800px] blur-sm" />
     </SwiperSlide>
   ))}
 </Swiper>
 
-
-    {/*  <div className="w-[70%] max-w-[1200px] mx-auto h-full text-[110px] leading-[90px] text-white justify-center flex flex-col items-start">
+{/*  <div className="w-[70%] max-w-[1200px] mx-auto h-full text-[110px] leading-[90px] text-white justify-center flex flex-col items-start">
       <WordPullUp
       className="md:w-[60%] Grotesque-font font-medium text-left tracking-[-0.02em] text-7xl leading-[60px] md:text-[130px] md:leading-[100px]"
       words="Stories  that  shape  lives"

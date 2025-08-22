@@ -38,7 +38,7 @@ function Content() {
   ]
   return (
     <section className="w-full bg-white text-gray-800">
-      <div className="w-[90%] max-w-[1200px] mx-auto py-24 flex md:gap-20">
+      <div className="w-[85%] max-w-[1200px] mx-auto py-24 flex md:gap-20">
         <div>
           <h6 className="text-5xl md:text-5xl mb-3 text-green font-medium">
           <TextAnimate animation="blurInUp" by="word">

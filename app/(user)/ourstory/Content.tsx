@@ -3,7 +3,7 @@ import React from "react";
 function Content() {
   return (
     <section className="w-full bg-white text-gray-800">
-      <div className="w-[90%] max-w-[1200px] mx-auto py-20 flex md:gap-20">
+      <div className="w-[85%] max-w-[1200px] mx-auto py-20 flex md:gap-20">
         {/* <div className="bg-green-light/20 border min-w-80 border-green-500 rounded-xl p-10">
         <div>
           <div className="w-40 h-40 bg-green-800 rounded-full"></div>

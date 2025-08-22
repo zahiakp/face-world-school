@@ -13,7 +13,7 @@ function Overview2() {
     ];
 
     return (
-        <section className='w-full bg-green-300'>
+        <section className='hidden md:block w-full bg-green-300'>
             <main className='w-[90%] grid grid-cols-14 justify-items-center items-center gap-y-14 gap-x-4 max-w-[1200px] mx-auto py-14'>
                 {statsData.map((stat, index) => (
                     <React.Fragment key={stat.label}>

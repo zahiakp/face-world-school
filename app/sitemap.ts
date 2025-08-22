@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 // This function generates the sitemap.xml file at build time.
 export default function sitemap(): MetadataRoute.Sitemap {
   // Define the base URL of your primary domain.
-  const baseUrl = 'https://faceschool.in';
+  const baseUrl = 'https://www.faceschool.in';
 
   // Array of your static pages.
   // Add any other static pages your site has to this list.

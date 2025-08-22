@@ -4,13 +4,13 @@ import React from "react";
 function Vision() {
   return (
     <section className="w-full bg-white text-gray-800 overflow-y-hidden">
-      <div className="w-[90%] max-w-[1200px] mx-auto py-24 flex md:gap-24 justify-between">
+      <div className="w-[90%] max-w-[1200px] mx-auto py-24 flex flex-col md:flex-row md:gap-24 items-center justify-between">
         <div
           className="relative group/img"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <div className="h-80 md:h-80 w-[100%] max-w-80 md:w-80 z-[5]  duration-300  relative">
+          <div className="h-72 max-w-72 md:h-80 w-[100%] md:max-w-80 md:w-80 z-[5]  duration-300  relative">
             <img
               src={`/images/7.jpg`}
               alt=""
@@ -24,7 +24,7 @@ function Vision() {
           </div>
         </div>
         <div className="flex-1 gap-3 flex flex-col w-3/4 justify-center">
-          <h6 className="text-5xl md:text-6xl text-green font-medium ">
+          <h6 className="text-4xl md:text-6xl text-green font-medium mt-10 md:mt-0">
             <TextAnimate animation="blurInUp" by="word">
               Vision
             </TextAnimate>

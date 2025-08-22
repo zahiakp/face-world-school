@@ -54,8 +54,8 @@ function Vision() {
     },
   ];
   return (
-    <section className="w-full bg-green-light/50 text-gray-800 overflow-y-hidden">
-      <div className="w-[90%] max-w-[1200px] mx-auto py-24 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    <section className="w-full bg-green-light/50 text-gray-800 overflow-x-hidden md:overflow-y-hidden">
+      <div className="w-[85%] max-w-[1200px] mx-auto py-24 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
        {Leaders.map((item:any,index:number)=>(
         <div key={index} className="border-4 border-green relative bg-green">
           <div className="h-72 w-full bg-green-light relative">
