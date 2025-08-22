@@ -25,7 +25,7 @@ function Overview() {
         },
     ]
   return (
-    <section className='w-full bg-green-light/50'>
+    <section className='hidden md:block w-full bg-green-light/50'>
         <main className='w-[90%] flex grid-cols-8 gap-14 max-w-[1200px] mx-auto py-20'>
             <div className='col-span-3'>
                 <p className='text-[130px] font-semibold text-green -my-10'>

@@ -107,7 +107,7 @@ function Batches() {
     
     return (
         <section className='w-full bg-white relative'>
-            <main className='w-[90%] flex flex-col md:flex-row text-gray-800 gap-10 max-w-[1200px] mx-auto py-20 z-[2] relative'>
+            <main className='w-[85%] flex flex-col md:flex-row text-gray-800 gap-10 max-w-[1200px] mx-auto py-20 z-[2] relative'>
                 <div className='w-full md:w-[20%]'>
                     <div className='flex flex-row md:flex-col md:space-y-3 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0'>
                         {Tabs.map((tab) => (

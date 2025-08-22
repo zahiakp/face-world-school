@@ -67,8 +67,8 @@ function Stages() {
 
   return (
     <section>
-      <main className="w-[90%] max-w-[1200px] mx-auto  grid grid-cols-3 gap-10 py-20">
-        <div className="col-span-3 grid grid-cols-15 items-center gap-0">
+      <main className="w-[90%] max-w-[1200px] mx-auto  grid grid-cols-1 md:grid-cols-3 gap-10 py-20">
+        <div className="col-span-3 hidden md:grid grid-cols-15 items-center gap-0">
           <div className="col-start-3 flex flex-col items-center justify-center">
             <p className={` ${currentStep >= 1 ? "bg-green-400 border-green-400 text-green-light" : "bg-gray-100 border-gray/20 text-gray-300"} w-12 h-12 text-xl flex items-center justify-center rounded-full border-4  font-semibold`}>
              {currentStep >= 1 ? <FaCheck /> : 1}

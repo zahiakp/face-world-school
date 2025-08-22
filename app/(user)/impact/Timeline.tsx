@@ -84,7 +84,8 @@ export function TimelineDemo() {
   ];
   return (
     <div className="relative w-full overflow-clip">
+      <div className="w-[85%] mx-auto">
       <Timeline data={data} title="Explore the scholarship milestones and achievements of our batches"/>
-    </div>
+    </div></div>
   );
 }

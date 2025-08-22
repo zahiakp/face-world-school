@@ -65,8 +65,8 @@ function Universities() {
     ]
   return (
     <section className='w-full bg-white relative'>
-        <main className='w-[90%] grid-cols-8 flex text-gray-800 gap-14 max-w-[1200px] mx-auto py-20 z-[2] relative'>
-         <div className='w-[33%]'><h6 className="text-5xl md:text-6xl text-green font-medium ">
+        <main className='w-[85%] grid-cols-8 flex flex-col md:flex-row text-gray-800 gap-14 max-w-[1200px] mx-auto py-20 z-[2] relative'>
+         <div className='w-full md:w-[33%]'><h6 className="text-4xl md:text-6xl text-green font-medium ">
                            <TextAnimate animation="blurInUp" by="word">
                             Academic Partners Around the World
                            </TextAnimate>

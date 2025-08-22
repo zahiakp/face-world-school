@@ -43,23 +43,23 @@ function Content() {
             className={`py-20 md:py-32 ${i % 2 == 1 ? "bg-green-light" : "bg-white"}`}
           >
             <main
-              className={`w-[90%] max-w-[1200px] mx-auto flex-col md:flex-row items-center flex justify-center ${
+              className={`w-[85%] max-w-[1200px] mx-auto flex-col md:flex-row items-center flex justify-center ${
                 i % 2 == 1 ? "md:flex-row-reverse" : "md:flex-row"
               } gap-10 md:gap-28`}
             >
               <div className="relative group/img" data-aos="fade-up" data-aos-delay="300">
-                <div className="h-80 md:h-80 w-[100%] max-w-80 md:w-80 z-[5] group-hover/img:scale-[1.02] duration-300  relative">
+                <div className="h-72 max-w-72 md:h-80 w-[100%] md:max-w-80 md:w-80 z-[5] group-hover/img:scale-[1.02] duration-300  relative">
                   <img
                     src={`/images/${project.image}`}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                   {/* <img src="/images/logo green light.png" alt="" className="text-green-light z-10 w-[350px] absolute -top-1 -left-1"/> */}
-                  <LogoStroke className="text-green z-10 w-[380px] h-auto absolute -top-7 -left-7"/>
+                  <LogoStroke className="text-green z-10 w-[340px] md:w-[380px] h-auto absolute -top-7 -left-7"/>
                 </div>
               </div>
-              <div className="flex-1 gap-3 flex flex-col w-3/4">
-                <h6 className="text-5xl md:text-6xl text-green font-medium">
+              <div className="flex-1 gap-3 flex flex-col md:w-3/4">
+                <h6 className="text-4xl md:text-6xl text-green font-medium">
                   <TextAnimate animation="blurInUp" by="word">
                     {project.title}
                   </TextAnimate>

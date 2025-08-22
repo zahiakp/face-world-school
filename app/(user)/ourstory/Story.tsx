@@ -144,7 +144,7 @@ const sectionsData = [
 export function StickyScrollRevealDemo() {
   return (
     <div className="w-full bg-green">
-        <div className="max-w-[1200px] mx-auto py-20">
+        <div className="w-[85%] max-w-[1200px] mx-auto py-20">
     <ScrollImageChanger 
         sections={sectionsData} 
         showDebug={false}
