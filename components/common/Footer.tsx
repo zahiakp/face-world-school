@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { FiGlobe } from "react-icons/fi";
@@ -8,19 +9,9 @@ import { TiSocialFacebook } from "react-icons/ti";
 
 function Footer() {
   const SOCIAL_LINKS = [
-    {
-      icon: <AiFillInstagram />,
-      link: "https://www.instagram.com/face.campus/",
-    },
-    {
-      icon: <RiWhatsappFill />,
-      link: "https://wa.me/+919107644644?text=Hello%20FACE%20School",
-    },
-    {
-      icon: <TiSocialFacebook />,
-      link: "https://www.facebook.com/facecampus.in",
-    },
-    // { icon: <FaXTwitter />, link: "" },
+    { icon: <AiFillInstagram />,link: "https://www.instagram.com/faceworldleadershipschool"},
+    { icon: <RiWhatsappFill />,link: "https://wa.me/+919107644644?text=Hello%20FACE%20School"},
+    { icon: <TiSocialFacebook />,link: "https://www.facebook.com/facecampus.in"},
     { icon: <FaYoutube />, link: "https://www.youtube.com/channel/UCf4fP14V8lTfV4O3T4tofzw/featured" },
   ];
   return (
@@ -101,7 +92,8 @@ function Footer() {
                 { label: "Admin Panel", path: "/admin" },
               ].map((item: any, index: number) => (
                 <li key={index}>
-                  <a
+                  <Link
+                    target="_blank"
                     href={item.path}
                     title=""
                     className="flex text-base group items-center hover:translate-x-0 -translate-x-2 gap-2 text-black transition-all duration-200  hover:font-semibold focus:text-primary"
@@ -111,7 +103,7 @@ function Footer() {
                       <IoMdArrowForward />
                     </span>
                     {item.label}{" "}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

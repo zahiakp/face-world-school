@@ -87,7 +87,7 @@ const pagination = {
       >
           <WordPullUp words={slide.title} className="text-6xl w-full md:w-2/4 text-green-light group leading-[55px] md:text-8xl md:leading-[95px] md:text-left font-normal" show={show ? 'show' : "hidden"} />
       </div>
-          <img src={`/images/${slide.image}`} className="absolute z-[0] hidden md:block right-0 top-0 h-[800px] blur-sm" />
+          <img src={`/images/${slide.image}`} className="absolute z-[1] hidden md:block right-0 top-0 h-[800px] blur-sm" />
     </SwiperSlide>
   ))}
 </Swiper>

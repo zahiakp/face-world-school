@@ -170,14 +170,10 @@ console.log("Active Nav Item:", dropdown);
           </div>
           <div className="py-3 mt-3 flex gap-2 mx-10">
             {[
-              {
-                                icon: <AiFillInstagram />,
-                                link: "https://www.instagram.com/mysukoon.in?igsh=ejhubHRlMGJ6dmZo",
-                              },
-                              { icon: <RiWhatsappFill />, link: "https://wa.me/+919645900096?text=Hello%20Sukoon%20Edu%20Village" },
-                              { icon: <TiSocialFacebook />, link: "https://www.facebook.com/share/12LAMTKXN79/?mibextid=wwXIfr" },
-                              // { icon: <FaXTwitter />, link: "" },
-                              { icon: <FaYoutube />, link: "https://youtu.be/qvimT91m6V0" },
+    { icon: <AiFillInstagram />,link: "https://www.instagram.com/faceworldleadershipschool"},
+    { icon: <RiWhatsappFill />,link: "https://wa.me/+919107644644?text=Hello%20FACE%20School"},
+    { icon: <TiSocialFacebook />,link: "https://www.facebook.com/facecampus.in"},
+    { icon: <FaYoutube />, link: "https://www.youtube.com/channel/UCf4fP14V8lTfV4O3T4tofzw/featured" },
             ].map((icon, i) => (
               <Link
                 target="_blank"

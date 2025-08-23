@@ -9,7 +9,7 @@ function Overview2() {
         { from: 10, to: 50, suffix: '%', label: 'Girls' },
         { from: 50, to: 100, suffix: '%', label: 'Residential Students' },
         { from: 10, to: 50, suffix: '%', label: 'Students in Scholarship' },
-        { from: 10, to: 30, suffix: '%', label: 'Faculty Members' },
+        { from: 10, to: 30, suffix: '+', label: 'Faculty Members' },
     ];
 
     return (
