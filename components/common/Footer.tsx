@@ -58,7 +58,7 @@ function Footer() {
                 { label: "Connect us", path: "" }
               ].map((item: any, index: number) => (
                 <li key={index}>
-                  <a
+                  <Link
                     target="_blank"
                     href={item.path}
                     title=""
@@ -69,7 +69,7 @@ function Footer() {
                       <IoMdArrowForward />
                     </span>
                     {item.label}{" "}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -117,31 +117,31 @@ function Footer() {
               FACE World Leadership School
               {/* , New Delhi, India */}
             </p>
-            <a href="mailto:info@faceschool.in" className="flex items-center gap-2 text-gray-800 mt-2">
+            <Link href="mailto:info@faceschool.in" className="flex items-center gap-2 text-gray-800 mt-2">
               <HiOutlineMail className="text-green-400/70" />
               <p>info@faceschool.in</p>
-            </a>
-            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+            </Link>
+            <Link href="" className="flex items-center gap-2 text-gray-800 mt-2">
               <IoMdCall className="text-green-400/70" />
               <p>+919107644644</p>
-            </a>
-            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+            </Link>
+            <Link href="" className="flex items-center gap-2 text-gray-800 mt-2">
               <IoMdCall className="text-green-400/70" />
               <p>+918129939881</p>
-            </a>
-            <a href="" className="flex items-center gap-2 text-gray-800 mt-2">
+            </Link>
+            <Link href="" className="flex items-center gap-2 text-gray-800 mt-2">
               <FiGlobe className="text-green-400/70" />
               <p>www.faceschool.in</p>
-            </a>
+            </Link>
             <div className="flex mt-5">
               {SOCIAL_LINKS.map((link: any, index: number) => (
-                <a
+                <Link
                   key={index}
                   href={link.link}
                   className="bg-green-300 text-white duration-300 p-2 rounded-[10px] mr-2 hover:scale-[1.1]"
                 >
                   {link.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

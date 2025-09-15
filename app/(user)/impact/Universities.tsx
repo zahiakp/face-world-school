@@ -1,6 +1,7 @@
 'use client'
 import { TextAnimate } from '@/components/ui/text-animate'
 import LogoStroke from '@/public/svg/LogoStrock'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 function Universities() {
@@ -81,13 +82,13 @@ function Universities() {
                          {active == '1' ? 
                          <div className='flex gap-5 flex-wrap items-center'>
                             {India.map((flag:any,index:number)=>(
-                                <div key={index} className='p-3'><img src={`/images/india/${flag}`} alt={flag} className='h-14 w-auto'/></div>
+                                <div key={index} className='p-3'><Image src={`/images/india/${flag}`} alt={flag} height={56} width={56} className='h-14 w-auto'/></div>
                             ))}
                             <p className='w-14 h-14 rounded-full bg-gray-100 font-medium border-4 border-gray-300 flex items-center justify-center'>+3</p>
                          </div> :
                          <div className='flex gap-5 flex-wrap'>
                             {Foreign.map((flag:any,index:number)=>(
-                                <div key={index} className='p-3'><img src={`/images/foreign/${flag}`} alt={flag} className='h-10 w-auto'/></div>
+                                <div key={index} className='p-3'><Image src={`/images/foreign/${flag}`} alt={flag} height={56} width={56} className='h-10 w-auto'/></div>
                             ))}
                                                         <p className='w-14 h-14 rounded-full bg-gray-100 font-medium border-4 border-gray-300 flex items-center justify-center'>+3</p>
                          </div>}

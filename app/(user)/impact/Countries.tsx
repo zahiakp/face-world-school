@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { PiStarFourFill } from "react-icons/pi";
 
@@ -26,7 +27,7 @@ function Countries() {
                                 <div className="flag-hover cursor-pointer">
                                     <div className="relative">
                                         <div className="w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-md bg-white transition-colors duration-300">
-                                            <img
+                                            <Image height={48} width={48}
                                                 src={`/images/countries/${country.flag}`}
                                                 alt={`${country.name} flag`}
                                                 className="w-full h-full object-cover"

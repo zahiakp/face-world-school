@@ -1,14 +1,15 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import { TextAnimate } from "./text-animate";
+import Link from "next/link";
 
 interface TimelineEntry {
+  id: string;
   title: string;
   content: React.ReactNode;
 }
@@ -17,6 +18,7 @@ export const Timeline = ({ data ,title}: { data: TimelineEntry[],title?:string }
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const [active, setActive] = useState<any>(null);
 
   useEffect(() => {
     if (ref.current) {
@@ -39,16 +41,25 @@ export const Timeline = ({ data ,title}: { data: TimelineEntry[],title?:string }
       ref={containerRef}
     >
       <div className="max-w-[1200px] mx-auto pb-5 pt-20">
-        {/* <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Batch Scholarship Timeline (2021 - 2025)
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          Explore the scholarship milestones and achievements of our batches from 2021 to 2025.
-        </p> */}
         {title && <div className="max-w-[700px]"><TextAnimate animation="blurInUp" by="word" className="text-4xl md:text-6xl text-green font-medium">
                                    {title}
                                    </TextAnimate>
       </div>}</div>
+      <div className='max-w-[1200px] mx-auto flex space-x-3 mt-5 bg'>
+                       {data.map((item: any) => (
+  <Link 
+    href={`#${item.id}`}
+    className={`p-3 text-left whitespace-nowrap cursor-pointer px-5 border rounded-lg transition-colors duration-200 ${
+      active === item.title 
+        ? "border-green-500 bg-green-light/50 font-semibold" 
+        : "border-gray-200 hover:bg-gray-50"
+    }`} 
+    key={item.title}
+  >{item.title}
+  </Link>
+))}
+
+                    </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -56,7 +67,7 @@ export const Timeline = ({ data ,title}: { data: TimelineEntry[],title?:string }
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
-            <div className="sticky flex flex-col md:flex-row z-[2] items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div id={item.id} className="sticky flex flex-col md:flex-row z-[2] items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>

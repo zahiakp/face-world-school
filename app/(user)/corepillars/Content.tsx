@@ -1,6 +1,7 @@
 import { TextAnimate } from "@/components/ui/text-animate";
 import LogoStroke from "@/public/svg/LogoStrock";
 import React from "react";
+import Image from "next/image";
 
 function Content() {
 
@@ -49,7 +50,7 @@ function Content() {
             {Pillars.map((item:any,index:number)=>(
               <div data-aos="fade-up" data-aos-delay={`${index+2}00`} key={index} className={`flex w-full md:w-full relative cursor-pointer after:h-[6px] after:bg-green-500 after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:duration-300 group/box items-center justify-start flex-col border hover:-translate-y-1 duration-300 hover:shadow-lg bg-green-50/50 border-green-500 p-7 px-9 overflow-hidden rounded-2xl`}>
                         {/* <LuSchool  className="text-7xl text-lime-600"/> */}
-              <img src={`/svg/${item.icon}`} alt="" className="h-28 mt-5"/>
+              <Image src={`/svg/${item.icon}`} alt={item.icon} className="h-28 mt-5" height={100} width={100}/>
 
                     <p className='mt-4 font-semibold w-full'>{item.title}
                     </p>

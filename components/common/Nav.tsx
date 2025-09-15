@@ -3,6 +3,7 @@ import React, { useState, useCallback } from "react";
 import { FaArrowAltCircleRight, FaHeart, FaYoutube } from "react-icons/fa";
 import { Twirl as Hamburger } from "hamburger-react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   IoIosArrowDropdownCircle,
   IoMdArrowForward,
@@ -13,7 +14,6 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { IoArrowDownCircle } from "react-icons/io5";
 import { FiCornerRightDown } from "react-icons/fi";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import Image from "next/image";
 
 
 interface NavProps {
@@ -42,12 +42,8 @@ console.log("Active Nav Item:", dropdown);
   return (
     <nav className="w-full px-10 bg-white text-gray-800 sticky top-0 z-[10] shadow-sm">
       <div className="w-full max-w-[1200px] h-[90px] md:h-[100px] flex items-center justify-between mx-auto">
-        <Link href="/">
-          <img
-            src="/images/Logo-Green.png"
-            alt="Face Logo"
-            className="h-[40px] md:h-[50px]"
-          />
+        <Link href="/" className="h-[40px] md:h-[50px]">
+          <Image alt="Face Logo" src={'/images/Logo-Green.png'} height={140} width={170}/>
         </Link>
         <div className="items-center gap-10 hidden md:flex">
           <ul className="flex items-center justify-center gap-8 text-[16px]">
@@ -205,9 +201,9 @@ export const NAV_ITEMS = [
       { label: "Our Leadership", path: "/leadership" },
       { label: "FACE Foundation", path: "/facefoundation" },
       { label: "Our Philosophy ", path: "/corepillars" },
-      { label: "Academic Council", path: "" },
-      { label: "FACE IAS Academy", path: "" },
-      { label: "Face study circle", path: "" },
+      { label: "Academic Council", path: "/academic-council" },
+      { label: "FACE IAS Academy", path: "/iasacademy" },
+      { label: "Face study circle", path: "/study-circle" },
     ],
   },
   {

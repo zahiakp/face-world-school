@@ -1,4 +1,5 @@
 import { TextAnimate } from "@/components/ui/text-animate";
+import Image from "next/image";
 import React from "react";
 
 function Vision() {
@@ -21,7 +22,7 @@ function Vision() {
             {/* <div className="w-40 h-80 bg-transparent border border-green -skew-12 -rotate-12 -top-10 absolute -bottom-20 right-24"></div> */}
           </div>
           <div className="w-[100%] md:max-w-80 mt-5 flex flex-col p-10 items-center justify-center bg-white border border-gray-300 rounded-3xl md:w-80 z-[5]">
-            <img src="/images/Gov emblem.jpg" alt="" className="h-20 mb-2" />
+            <Image src="/images/Gov emblem.jpg" alt="Gov emblem.jpg" className="h-20 mb-2" height={80} width={160}/>
             <p className="text-sm">
               FACE Foundation is a registered NGO under The Indian Trusts Act,
               with valid 12AB, 8OG, and CSR registration approvals. It is also
