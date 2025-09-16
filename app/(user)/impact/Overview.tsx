@@ -48,7 +48,7 @@ function Overview() {
                 <p className='text-[130px] font-semibold text-green -my-10'>
                     <CountUp
   from={200}
-  to={299}
+  to={229}
   separator=","
   direction="up"
   duration={1}

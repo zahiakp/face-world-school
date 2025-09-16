@@ -1,4 +1,5 @@
 import LogoStroke from "@/public/svg/LogoStrock";
+import Link from "next/link";
 import React from "react";
 
 function Hero() {
@@ -17,7 +18,7 @@ function Hero() {
         <div className="breadcrumbs text-sm text-gray-300 -mt-2">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>Contact Us</li>
           </ul>

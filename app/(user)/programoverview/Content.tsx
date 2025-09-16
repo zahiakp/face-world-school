@@ -1,5 +1,6 @@
 import { TextAnimate } from "@/components/ui/text-animate";
 import LogoStroke from "@/public/svg/LogoStrock";
+import Image from "next/image";
 import React, { Fragment } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 
@@ -49,9 +50,9 @@ function Content() {
             >
               <div className="relative group/img" data-aos="fade-up" data-aos-delay="300">
                 <div className="h-72 max-w-72 md:h-80 w-[100%] md:max-w-80 md:w-80 z-[5] group-hover/img:scale-[1.02] duration-300  relative">
-                  <img
+                  <Image 
                     src={`/images/${project.image}`}
-                    alt=""
+                    alt={project.image} height={320} width={320}
                     className="w-full h-full object-cover"
                   />
                   {/* <img src="/images/logo green light.png" alt="" className="text-green-light z-10 w-[350px] absolute -top-1 -left-1"/> */}

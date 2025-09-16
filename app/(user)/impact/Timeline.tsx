@@ -7,78 +7,73 @@ import { batch2021Data, batch2022Data, batch2023Data, batch2024Data, batch2025Da
 export function TimelineDemo() {
   const data = [
     {
+      id: "2021",
       title: "2021 Batch",
       content: (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-            <main className='w-full sm:col-span-2 lg:col-span-3 xl:col-span-4'>
-                {/* {activeBatchOverview.map((batch:any,index:number) => ( */}
-                    <BatchOverviewCard  batchData={batch2021Data} />
-                {/* // ))} */}
-            </main>
-                        {Batch2021.map((student:any, index:number) => (
-                            <StudentCard key={index} student={student} />
-                        ))}
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <main className="w-full sm:col-span-2 lg:col-span-3 xl:col-span-4">
+            <BatchOverviewCard batchData={batch2021Data} />
+          </main>
+          {Batch2021.map((student: any, index: number) => (
+            <StudentCard key={index} student={student} />
+          ))}
+        </div>
       ),
     },
     {
+      id: "2022",
       title: "2022 Batch",
       content: (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-            <main className='w-full sm:col-span-2 lg:col-span-3 xl:col-span-4'>
-                {/* {activeBatchOverview.map((batch:any,index:number) => ( */}
-                    <BatchOverviewCard  batchData={batch2022Data} />
-                {/* // ))} */}
-            </main>
-                        {Batch2022.map((student:any, index:number) => (
-                            <StudentCard key={index} student={student} />
-                        ))}
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <main className="w-full sm:col-span-2 lg:col-span-3 xl:col-span-4">
+            <BatchOverviewCard batchData={batch2022Data} />
+          </main>
+          {Batch2022.map((student: any, index: number) => (
+            <StudentCard key={index} student={student} />
+          ))}
+        </div>
       ),
     },
     {
+      id: "2023",
       title: "2023 Batch",
       content: (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-            <main className='w-full sm:col-span-2 lg:col-span-3 xl:col-span-4'>
-                {/* {activeBatchOverview.map((batch:any,index:number) => ( */}
-                    <BatchOverviewCard  batchData={batch2023Data} />
-                {/* // ))} */}
-            </main>
-                        {Batch2023.map((student:any, index:number) => (
-                            <StudentCard key={index} student={student} />
-                        ))}
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <main className="w-full sm:col-span-2 lg:col-span-3 xl:col-span-4">
+            <BatchOverviewCard batchData={batch2023Data} />
+          </main>
+          {Batch2023.map((student: any, index: number) => (
+            <StudentCard key={index} student={student} />
+          ))}
+        </div>
       ),
     },
     {
+      id: "2024",
       title: "2024 Batch",
       content: (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-            <main className='w-full sm:col-span-2 lg:col-span-3 xl:col-span-4'>
-                {/* {activeBatchOverview.map((batch:any,index:number) => ( */}
-                    <BatchOverviewCard  batchData={batch2024Data} />
-                {/* // ))} */}
-            </main>
-                        {Batch2024.map((student:any, index:number) => (
-                            <StudentCard key={index} student={student} />
-                        ))}
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <main className="w-full sm:col-span-2 lg:col-span-3 xl:col-span-4">
+            <BatchOverviewCard batchData={batch2024Data} />
+          </main>
+          {Batch2024.map((student: any, index: number) => (
+            <StudentCard key={index} student={student} />
+          ))}
+        </div>
       ),
     },
     {
+      id: "2025",
       title: "2025 Batch",
       content: (
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-            <main className='w-full sm:col-span-2 lg:col-span-3 xl:col-span-4'>
-                {/* {activeBatchOverview.map((batch:any,index:number) => ( */}
-                    <BatchOverviewCard  batchData={batch2025Data} />
-                {/* // ))} */}
-            </main>
-                        {Batch2025.map((student:any, index:number) => (
-                            <StudentCard key={index} student={student} />
-                        ))}
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <main className="w-full sm:col-span-2 lg:col-span-3 xl:col-span-4">
+            <BatchOverviewCard batchData={batch2025Data} />
+          </main>
+          {Batch2025.map((student: any, index: number) => (
+            <StudentCard key={index} student={student} />
+          ))}
+        </div>
       ),
     },
   ];
