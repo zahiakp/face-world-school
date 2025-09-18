@@ -6,7 +6,9 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import 'primereact/resources/themes/saga-blue/theme.css';
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import 'nprogress/nprogress.css';
 import { justSans } from "@/lib/fonts";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: {
@@ -33,20 +35,7 @@ export const metadata: Metadata = {
     url: "https://www.faceschool.in",
     siteName: "FACE World Leadership School",
     description: "FACE World Leadership School, a residential institution in Kerala, is dedicated to nurturing the next generation of civil servants and global leaders from diverse and underprivileged backgrounds. We offer a holistic educational model with fully funded scholarships , providing intensive coaching for competitive exams like Civil Services, CUET, JEE, and NDA. Our unique three-stage journey guides students from our campus in Kozhikode to top national and international universities and finally to our FACE IAS Academy in Trivandrum for dedicated civil service preparation. Rooted in ethical leadership and social impact, our curriculum includes AI and technology training, global diplomacy, and social entrepreneurship to create changemakers for a better world",
-    images: [
-    {
-      url: "https://www.faceschool.in/images/logo-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "FACE World Leadership School"
-    },
-    {
-      url: "https://www.faceschool.in/images/logo-banner-2.png",
-      width: 1200,
-      height: 630,
-      alt: "FACE World Leadership School"
-    }
-  ]
+    images: ["https://www.faceschool.in/images/logo-thumb.png"]
   },
   
 }
@@ -60,7 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={` ${justSans.className} antialiased bg-white`}
-      >
+      > <GoogleAnalytics gaId="G-M27DXTCC1X" />
         <PageLoader/><PrimeReactProvider>{children}</PrimeReactProvider>
       </body>
     </html>

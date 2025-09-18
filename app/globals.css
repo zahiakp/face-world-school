@@ -17,6 +17,9 @@
   --color-green-900: #CEFFAD;
   --color-green-light: #CEFFAE;
 }
+*{
+  scroll-behavior: smooth;
+}
 
 .imperial-script {
   font-family: "Imperial Script", cursive;

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { Leaders } from './(user)/academic-council/Content';
 
 // This function generates the sitemap.xml file at build time.
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -39,6 +40,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
     },
     {
+      url: `${baseUrl}/academic-council`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+    },
+    {
+      url: `${baseUrl}/iasacademy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+    },
+    {
+      url: `${baseUrl}/study-circle`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+    },
+    {
       url: `${baseUrl}/programoverview`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -70,18 +86,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // that data from your CMS or database here and map over it.
 
   // Placeholder: Replace this with your actual data fetching logic.
-//   const dynamicPosts = [
-//     { slug: 'our-vision-for-future-leaders', updatedAt: '2024-05-20T00:00:00.000Z' },
-//     { slug: 'student-success-story-jane-doe', updatedAt: '2024-05-15T00:00:00.000Z' },
-//   ];
+  const updatedAt= '2024-05-20T00:00:00.000Z';
 
-//   const blogRoutes = dynamicPosts.map((post) => ({
-//     url: `${baseUrl}/blog/${post.slug}`,
-//     lastModified: new Date(post.updatedAt),
-//     changeFrequency: 'weekly' as const,
-//   }));
+  const AcademicCouncil = Leaders.map((post:any) => ({
+    url: `${baseUrl}/academic-council/${post.slug}`,
+    lastModified: new Date(updatedAt),
+    changeFrequency: 'weekly' as const,
+  }));
 
 
   // Combine static and dynamic routes and return them.
-  return staticRoutes;
+  return [...staticRoutes, ...AcademicCouncil];
 }

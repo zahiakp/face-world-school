@@ -3,48 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Users, Target, BookOpen, Heart, MapPin, Calendar, Quote, Menu, X, ArrowRight, Globe, Award, HandHeart, Icon } from 'lucide-react';
 import Image from 'next/image';
 import LogoStroke from '@/public/svg/LogoStrock';
+import Link from 'next/link';
 
 export const Content = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'initiatives', 'chapters', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-          }
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId:any) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
-
-  const chapters = [
-    { name: 'Aligarh', region: 'Uttar Pradesh' },
-    { name: 'Bangalore', region: 'Karnataka' },
-    { name: 'Delhi', region: 'National Capital Territory' },
-    { name: 'Pondicherry', region: 'Union Territory' },
-    { name: 'Madhya Pradesh', region: 'Central India' },
-    { name: 'Bhopal', region: 'Madhya Pradesh' },
-    { name: 'Andhra Pradesh', region: 'South India' },
-    { name: 'Kerala', region: 'South India' }
-  ];
 
   const Features = [
     {
@@ -87,19 +48,19 @@ export const Content = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
-                  onClick={() => scrollToSection('initiatives')}
+                <Link 
+                  href={'#about'}
                   className="inline-flex items-center px-8 py-4 bg-green-300 cursor-pointer text-white rounded-lg hover:bg-green-300 transition-all transform hover:scale-[1.01] font-semibold"
                 >
-                  Our Initiatives
+                  About Us
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                <button 
-                  onClick={() => scrollToSection('chapters')}
+                </Link>
+                <Link 
+                  href={'#initiatives'}
                   className="inline-flex items-center px-8 py-4 border-2 border-green-300 text-green-300 rounded-lg transition-colors font-semibold"
                 >
-                  Find Your Chapter
-                </button>
+                  Out Initiatives
+                </Link>
               </div>
             </div>
             <div className='h-full hidden md:block absolute bottom-0 right-0 overflow-hidden'>
