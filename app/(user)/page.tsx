@@ -10,9 +10,9 @@ export default function Home() {
       title="FACE World Leadership School"
       description="FACE World Leadership School, a residential institution in Kerala, is dedicated to nurturing the">
       <Hero/>
-      <Stages/>
       <Overview/>
       <Overview2/>
+      <Stages/>
     </UserLayout>
   );
 }
