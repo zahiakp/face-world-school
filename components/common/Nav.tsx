@@ -211,7 +211,7 @@ export const NAV_ITEMS = [
     items: [
       { label: "Programs Overview", path: "/programoverview" },
       { label: "What We Provide", path: "/whatprovide" },
-      { label: "Foundation Programs", path: "" },
+      { label: "Foundation Programs", path: "/foundation-programs" },
       { label: "FACE Entrance Coaching", path: "" },
     ],
   },
@@ -219,7 +219,7 @@ export const NAV_ITEMS = [
   {
     label: "Flagship Initiatives",
     items: [
-      { label: "FACEx Talk Show", path: "" },
+      { label: "FACEx Talk Show", path: "/FACEx" },
       { label: "Face Inspira", path: "" },
       { label: "Campus Expeditia", path: "" },
       { label: "Current Affairs", path: "" },
