@@ -198,10 +198,10 @@ export const NAV_ITEMS = [
     items: [
       { label: "Our Story", path: "/ourstory" },
       { label: "Vision & Mission", path: "/vision-mission" },
-      { label: "Our Leadership", path: "/leadership" },
+      // { label: "Our Leadership", path: "/leadership" },
       { label: "FACE Foundation", path: "/facefoundation" },
       { label: "Our Philosophy ", path: "/corepillars" },
-      { label: "Academic Council", path: "/academic-council" },
+      // { label: "Academic Council", path: "/academic-council" },
       { label: "FACE IAS Academy", path: "/iasacademy" },
       { label: "Face study circle", path: "/study-circle" },
     ],
