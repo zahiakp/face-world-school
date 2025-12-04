@@ -214,7 +214,7 @@ function Footer() {
               className="text-zinc-800" />
             </a>
           </div> */}
-          <a href="https://abaqas.i" className="text-sm my-2 text-gray-700 hover:underline">
+          <a href="https://abaqas.in" className="text-sm my-2 text-gray-700 hover:underline">
             ⚡ abaqas.in
           </a>
         </div>
