@@ -2,6 +2,7 @@ import React from 'react';
 import { Play, Users, Globe, Award, Calendar, MapPin, ArrowRight, Star, Mic, Video, Target, Lightbulb, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 import GradientBlinds from '@/components/GradientBlinds';
+import Link from 'next/link';
 
 const Content = () => {
   return (
@@ -162,10 +163,10 @@ const Content = () => {
                   <MapPin className="h-5 w-5 mr-3" />
                   <span className="font-semibold">Rajkot, Gujarat</span>
                 </div>
-                <button className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-500 flex items-center transform transition-all duration-300">
+                <Link href="https://www.facextalkshow.com/participate#application-form" className="bg-red-600 w-fit text-white px-8 py-3 rounded-full font-semibold hover:bg-red-500 flex items-center transform transition-all duration-300">
                   Register Interest
                   <ArrowRight className="h-4 w-4 ml-2" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -187,10 +188,10 @@ const Content = () => {
                   <MapPin className="h-5 w-5 mr-3" />
                   <span className="font-semibold">Dubai, United Arab Emirates</span>
                 </div>
-                <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-3 rounded-full font-semibold hover:from-red-500 hover:to-red-600 transition-all flex items-center group-hover:transform group-hover:scale-105 duration-300">
+                <Link href="https://www.facextalkshow.com" className="bg-gradient-to-r w-fit from-red-600 to-red-700 text-white px-8 py-3 rounded-full font-semibold hover:from-red-500 hover:to-red-600 transition-all flex items-center group-hover:transform group-hover:scale-105 duration-300">
                   Early Access
                   <ArrowRight className="h-4 w-4 ml-2" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -232,10 +233,10 @@ const Content = () => {
     </div>
 
     <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-      <button className="group bg-gradient-to-r from-red-600 to-red-700 text-white px-12 py-5 rounded-full font-bold text-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 flex items-center justify-center">
+      <Link href="https://www.facextalkshow.com/participate#application-form" className="group w-fit bg-gradient-to-r from-red-600 to-red-700 text-white px-12 py-5 rounded-full font-bold text-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 flex items-center justify-center">
         Apply to Participate
         <ArrowRight className="h-6 w-6 ml-3 group-hover:translate-x-1 transition-transform" />
-      </button>
+      </Link>
       {/* <button className="border-2 border-red-600 text-red-400 px-12 py-5 rounded-full font-bold text-lg hover:bg-red-600 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25">
         Explore Episodes
       </button> */}
