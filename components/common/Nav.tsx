@@ -237,7 +237,7 @@ export const NAV_ITEMS = [
       { label: "INSAF", path: "" },
     ],
   },
-  { label: "Admissions", path: "" },
+  { label: "Admissions", path: "/admission" },
   { label: "Contact Us", path: "/contact" },
   // { label: "Support Our Mission", path: "" },
 ];
