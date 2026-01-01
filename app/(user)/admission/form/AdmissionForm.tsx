@@ -88,7 +88,7 @@ type AdmissionFormData = z.infer<typeof admissionSchema>;
 
 function AdmissionForm() {
   const [activeStep, setActiveStep] = useState(0);
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const {
     control,
