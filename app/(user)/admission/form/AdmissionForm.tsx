@@ -10,6 +10,37 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { submitAdmission } from "@/app/actions/submitAdmission";
+import LogoStroke from "@/public/svg/LogoStrock";
+
+const MADRASA_OPTIONS = [
+  { value: "No", label: "No" },
+  ...Array.from({ length: 10 }, (_, i) => ({
+    value: (i + 1).toString(),
+    label: (i + 1).toString(),
+  })),
+];
+
+const GENDER_OPTIONS = [
+  { value: "Male", label: "Male" },
+  { value: "Female", label: "Female" },
+];
+
+const EXAM_BOARD_OPTIONS = [
+  { value: "CBSE", label: "CBSE" },
+  { value: "SSLC", label: "SSLC" },
+  { value: "ICSE", label: "ICSE" },
+  { value: "Other", label: "Other" },
+];
+
+const STREAM_OPTIONS = [
+  { value: "Humanities", label: "Humanities" },
+  { value: "Computer Science", label: "Computer Science" },
+];
+
+const VISITED_SOCIALS_OPTIONS = [
+  { value: "Yes", label: "Yes" },
+  { value: "No", label: "No" },
+];
 
 const admissionSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -57,6 +88,7 @@ type AdmissionFormData = z.infer<typeof admissionSchema>;
 
 function AdmissionForm() {
   const [activeStep, setActiveStep] = useState(0);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const {
     control,
@@ -158,6 +190,7 @@ function AdmissionForm() {
     const result = await submitAdmission(data);
 
     if (result.success) {
+      setIsSubmitted(true);
       toast.success("Application Submitted!", {
         description: "Thank you for applying to FACE World Leadership School.",
       });
@@ -169,6 +202,10 @@ function AdmissionForm() {
   };
 
   const examBoard = watch("examBoard");
+
+  if (isSubmitted) {
+    return <SuccessGreeting />;
+  }
 
   return (
     <div className="bg-white p-6 md:p-12 rounded-2xl shadow-xl border border-zinc-200 max-w-4xl mx-auto my-10 min-h-[800px] flex flex-col justify-between">
@@ -256,10 +293,7 @@ function AdmissionForm() {
                             label="Gender"
                             required
                             placeholder="Select Gender"
-                            options={[
-                              { value: "Male", label: "Male" },
-                              { value: "Female", label: "Female" },
-                            ]}
+                            options={GENDER_OPTIONS}
                             error={errors.gender?.message}
                           />
                         )}
@@ -418,15 +452,10 @@ function AdmissionForm() {
                         render={({ field }) => (
                           <FSelect
                             {...field}
-                            label="Name of Examination and Board"
+                            label="Name your 10th Board of examination"
                             required
                             placeholder="Select Board"
-                            options={[
-                              { value: "CBSE", label: "CBSE" },
-                              { value: "SSLC", label: "SSLC" },
-                              { value: "ICSE", label: "ICSE" },
-                              { value: "Other", label: "Other" },
-                            ]}
+                            options={EXAM_BOARD_OPTIONS}
                             error={errors.examBoard?.message}
                           />
                         )}
@@ -449,11 +478,12 @@ function AdmissionForm() {
                       name="madrasaEducation"
                       control={control}
                       render={({ field }) => (
-                        <FInput
+                        <FSelect
                           {...field}
-                          label="Madrasa Education"
+                          label="Moral/Madrasa Education"
                           required
-                          placeholder="e.g., 5th Standard, Completed"
+                          placeholder="Select Option"
+                          options={MADRASA_OPTIONS}
                           error={errors.madrasaEducation?.message}
                         />
                       )}
@@ -480,10 +510,7 @@ function AdmissionForm() {
                             label="Interested Stream"
                             required
                             placeholder="Select Stream"
-                            options={[
-                              { value: "Humanities", label: "Humanities" },
-                              { value: "Science", label: "Science" },
-                            ]}
+                            options={STREAM_OPTIONS}
                             error={errors.interestedStream?.message}
                           />
                         )}
@@ -676,10 +703,7 @@ function AdmissionForm() {
                               {...field}
                               label="Have you visited FACE official YouTube and Instagram accounts?"
                               placeholder="Select option"
-                              options={[
-                                { value: "Yes", label: "Yes" },
-                                { value: "No", label: "No" },
-                              ]}
+                              options={VISITED_SOCIALS_OPTIONS}
                               error={errors.visitedSocials?.message}
                             />
                           )}
@@ -737,6 +761,75 @@ function AdmissionForm() {
 
 export default AdmissionForm;
 
+const SuccessGreeting = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-white p-8 md:p-16 relative overflow-hidden rounded-xl border border-green-400/50 max-w-2xl mx-auto my-20 min-h-[600px] flex flex-col items-center justify-center text-center relative overflow-hidden"
+    >
+      {/* Decorative background elements */}
+      {/* <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-green-600 to-green-950" />
+      <div className="absolute -top-24 -right-24 w-48 h-48 bg-green-50 rounded-full blur-3xl opacity-50" />
+      <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-green-50 rounded-full blur-3xl opacity-50" /> */}
+
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+          delay: 0.2,
+        }}
+        className="w-28 h-28 bg-gradient-to-tr from-green-300 to-green-500 rounded-full flex items-center justify-center mb-8 shadow-green-200"
+      >
+        <FaCheck className="text-5xl text-white" />
+      </motion.div>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="text-4xl font-semibold text-green-950 font-Grotesque-font mb-4"
+      >
+        Congratulations!
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="space-y-4"
+      >
+        <p className="text-2xl font-medium text-green-400">
+          Your application is on its way.
+        </p>
+        <p className="text-lg text-green-950/60 max-w-sm mx-auto leading-relaxed">
+          Thank you for applying to FACE World Leadership School. We have
+          received your details and our team will get in touch with you soon.
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7 }}
+        className="pt-6 z-[2]"
+      >
+        <button
+          onClick={() => (window.location.href = "/")}
+          className="btn bg-transparent border border-zinc-200 hover:bg-green-light text-green-950 px-7 py-4 rounded-full text-base font-medium shadow-none transition-all hover:scale-105 active:scale-95"
+        >
+          Explore More
+        </button>
+      </motion.div>
+      <div className="absolute -top-10 -left-10 w-60 h-80 bg-zinc-300/20 rounded-full blur-2xl"></div>
+      <LogoStroke className="text-green-400/50 -z-0 w-[380px] h-auto absolute -bottom-40 -right-[20%] rotate-12" />
+    </motion.div>
+  );
+};
+
 // Helper Components
 const FInput = ({ label, error, ...props }: any) => {
   return (
@@ -790,31 +883,36 @@ const FSelect = ({ label, error, options, ...props }: any) => {
           {label} {props.required && <span className="text-red-500">*</span>}
         </span>
       </label>
-      <Select
-        {...props}
-        variant="outlined"
-        className={`w-full border border-zinc-200 rounded-md bg-white text-green-950 ${
+      <div
+        className={`w-full border rounded-md bg-white transition-all duration-200 ${
           isFocused
-            ? "border-green-300 ring-0 outline-none focus:ring-0 focus:border-green-300"
+            ? "border-green-300 ring-1 ring-green-300/20"
             : "border-zinc-200"
         }`}
-        style={{ height: "40px", paddingTop: "4px" }}
-        size="large"
-        showSearch
-        filterOption={(input, option) =>
-          ((option?.label ?? "") as string)
-            .toLowerCase()
-            .includes(input.toLowerCase())
-        }
-        value={props.value || undefined}
-        onChange={(val) => props.onChange(val)}
-        options={options}
-        onFocus={() => setIsFocused(true)}
-        onBlur={(e) => {
-          setIsFocused(false);
-          props.onBlur && props.onBlur(e);
-        }}
-      />
+      >
+        <Select
+          {...props}
+          variant="borderless"
+          className="w-full text-green-950"
+          style={{ height: "40px" }}
+          size="large"
+          showSearch
+          virtual={false}
+          filterOption={(input, option) =>
+            ((option?.label ?? "") as string)
+              .toLowerCase()
+              .includes(input.toLowerCase())
+          }
+          value={props.value || undefined}
+          onChange={(val) => props.onChange(val)}
+          options={options}
+          onFocus={() => setIsFocused(true)}
+          onBlur={(e) => {
+            setIsFocused(false);
+            props.onBlur && props.onBlur(e);
+          }}
+        />
+      </div>
 
       {error && <span className="text-red-500 text-sm mt-1">{error}</span>}
     </div>
