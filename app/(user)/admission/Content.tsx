@@ -1,4 +1,5 @@
 import { TextAnimate } from "@/components/ui/text-animate";
+import LogoStroke from "@/public/svg/LogoStrock";
 import { FastForward, GraduationCap, NotebookPen, UserPlus, UserRoundSearch, UserStar } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -13,13 +14,13 @@ function Content() {
 
     const SelectionProcess = [
         {   stage:1,
-            title:"Writting Test",
-            description:"The first stage of admission is the written test.",
+            title:"Application Form",
+            description:"The first stage of admission is the application form.",
             icon:<NotebookPen size={20} />
         },
         {   stage:2,
-            title:"Personality Test",
-            description:"The second stage of admission is the personality test.",
+            title:"Online Test",
+            description:"The second stage of admission is the online test.",
             icon:<UserRoundSearch size={20} />
         },
         {   stage:3,
@@ -34,7 +35,7 @@ function Content() {
             title:"Stage 1: Early Bird",
             description:<span>The first stage or Early bird admission is held in the
                     months of
-                    <span className="font-semibold">January and February</span></span>,
+                    <span className="font-semibold">January and March</span></span>,
             icon:<FastForward size={20} />
         },
         {  
@@ -101,6 +102,7 @@ function Content() {
             </div>
             {/* Decorative circle */}
             <div className="absolute -bottom-10 -right-10 w-60 h-32 bg-green-500/40 rounded-full blur-2xl"></div>
+            <LogoStroke className="text-green-light/30 z-[1] w-[280px] h-auto absolute -bottom-40 -right-[15%] rotate-12" />
           </div>
         </div>
 
@@ -135,7 +137,7 @@ function Content() {
           </div>
 
           {/* CTA */}
-          <div className="p-8 px-14 bg-green-50 rounded-2xl border border-green-500">
+          <div className="p-8 px-14 bg-green-50 rounded-2xl border border-green-500 relative  overflow-hidden">
             <h3 className="text-3xl font-semibold text-green-950 mb-2">
               Ready to Join Us?
             </h3>
