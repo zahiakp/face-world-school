@@ -36,8 +36,6 @@ const Nav = React.memo(({ active }: NavProps) => {
     setOpen((prev) => !prev);
   }, []);
 
-console.log("Active Nav Item:", dropdown);
-
 
   return (
     <nav className="w-full px-10 bg-white text-gray-800 sticky top-0 z-[10] shadow-sm">

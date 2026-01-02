@@ -102,8 +102,6 @@ function Batches() {
        };
 
     const activeBatchOverview = batchOverview[active] || [];
-
-    console.log(activeBatchOverview);
     
     return (
         <section className='w-full bg-white relative'>
