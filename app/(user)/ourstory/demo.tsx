@@ -131,7 +131,6 @@ const ScrollImageChanger: React.FC<ScrollImageChangerProps> = ({
       return;
     }
 
-    console.log(`Changing to section ${sectionIndex + 1}`);
     setCurrentSection(sectionIndex);
     setIsTransitioning(true);
 
@@ -150,11 +149,9 @@ const ScrollImageChanger: React.FC<ScrollImageChangerProps> = ({
   // Handle play button click
   const handlePlayClick = useCallback(() => {
     const currentSectionData = sections[currentSection];
-    console.log('Play button clicked for section:', currentSectionData?.title);
     
     if (currentSectionData?.videoId) {
       // Handle video popup logic here
-      console.log('Playing video:', currentSectionData.videoId);
     }
   }, [currentSection, sections]);
 

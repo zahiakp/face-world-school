@@ -16,7 +16,6 @@ const SLIDES = [
   {title:"Developing leadership from values.",image:"logo-pattern3.png"},
   {title:"Equal opportunity grounded in merit.",image:"logo-pattern4.png"},
 ]
-console.log("Show state:", show);
 useEffect(() => {
   setTimeout(() => {
     setShow(true);

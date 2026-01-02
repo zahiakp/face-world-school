@@ -2,6 +2,7 @@ import UserLayout from "@/components/layout/UserLayout";
 import React from "react";
 import AdmissionForm from "./AdmissionForm";
 import Hero from "../Hero";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Application Form - FACE Campus",

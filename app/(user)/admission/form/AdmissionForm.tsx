@@ -4,13 +4,14 @@ import React, { useState } from "react";
 import { toast } from "sonner";
 import { Select, DatePicker } from "antd";
 import dayjs from "dayjs";
-import { FaChevronLeft, FaChevronRight, FaCheck } from "react-icons/fa";
+import { FaChevronLeft, FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { submitAdmission } from "@/app/actions/submitAdmission";
 import LogoStroke from "@/public/svg/LogoStrock";
+
 
 const MADRASA_OPTIONS = [
   { value: "No", label: "No" },
