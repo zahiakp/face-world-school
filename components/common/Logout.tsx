@@ -17,7 +17,7 @@ function Logout() {
   };
   
   return (<>
-    <button onClick={() => handleLogout()} className="group absolute bottom-0 w-full button p-5  bg-zinc-200 hover:bg-lime-600 hover:text-white duration-200" aria-label="Logout">
+    <button onClick={() => handleLogout()} className="group absolute bottom-0 w-full button p-5  bg-zinc-200 hover:bg-green-300 hover:text-white duration-200" aria-label="Logout">
       <StyledButton text={"Log Out"}/>
       <div className="arrow-wrapper">
         <div className="arrow bg-secondary/55"></div>

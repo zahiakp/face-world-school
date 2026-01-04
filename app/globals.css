@@ -133,3 +133,53 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.p-paginator {
+  @apply w-full py-5 rounded-lg gap-1
+}
+
+.p-paginator-page {
+  @apply hover:bg-zinc-100 border border-gray-200 duration-300 rounded-lg
+}
+
+.p-paginator-pages {
+  @apply gap-1 flex
+}
+
+.p-paginator-first, .p-paginator-prev, .p-paginator-next, .p-paginator-last {
+  @apply bg-zinc-100 hover:bg-zinc-200 duration-300 rounded-lg
+}
+
+.p-paginator .p-paginator-pages .p-highlight {
+  @apply bg-green-200 font-bold text-white
+}
+
+
+.p-paginator .p-dropdown {
+  @apply border border-gray-200 bg-zinc-50 rounded-lg h-10 flex items-center px-2 hover:border-green-200 transition-all duration-300
+}
+
+.p-paginator .p-dropdown .p-dropdown-label {
+  @apply text-sm font-medium text-zinc-700
+}
+
+.p-paginator .p-dropdown .p-dropdown-panel {
+  @apply bg-white border border-gray-100 shadow-none rounded-xl mt-1 overflow-hidden
+}
+
+.p-dropdown-items {
+  @apply p-1
+}
+
+.p-dropdown-item {
+  @apply rounded-md py-2 px-3 text-sm transition-colors duration-200
+}
+
+.p-dropdown-item.p-highlight {
+  @apply bg-green-200 text-white font-bold
+}
+
+.p-dropdown-item:not(.p-highlight):hover {
+  @apply bg-zinc-100
+}
