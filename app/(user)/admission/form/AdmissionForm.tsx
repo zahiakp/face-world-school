@@ -11,7 +11,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { submitAdmission } from "@/app/actions/submitAdmission";
 import LogoStroke from "@/public/svg/LogoStrock";
-
+import TailspinLoader from "@/components/common/TailspinLoader";
 
 const MADRASA_OPTIONS = [
   { value: "No", label: "No" },
@@ -735,13 +735,13 @@ function AdmissionForm() {
             type="button"
             onClick={handleSubmit(onSubmit)}
             disabled={isSubmitting}
-            className="btn bg-green-950 hover:bg-green-200 text-green-50 px-5 rounded-lg border-none shadow-lg shadow-green-950/30 disabled:bg-green-950/50 disabled:text-green-50/50"
+            className="btn bg-green-950 hover:bg-green-200 text-green-50 px-5 h-[48px] rounded-lg border-none shadow-lg shadow-green-950/30 disabled:bg-green-950/50 disabled:text-green-50/50"
           >
             {isSubmitting ? (
-              <>
-                <span className="loading loading-spinner loading-sm mr-2"></span>
+              <div className="flex items-center gap-2">
+                <TailspinLoader size="18" color="white" />
                 Submitting...
-              </>
+              </div>
             ) : (
               "Submit Application"
             )}

@@ -1,24 +1,32 @@
-import React, { PropsWithChildren } from 'react';
-import Dashboard from '../common/Dashboard';
-import { Metadata } from 'next';
+import React, { PropsWithChildren } from "react";
+import Dashboard from "../common/Dashboard";
+import { Metadata } from "next";
 
-interface AdminLayoutProps {}
+interface AdminLayoutProps {
+  isMargin?: boolean;
+}
 
 export const metadata: Metadata = {
   title: "Admin - Face World Leadership School",
   description: "",
 };
 
-
-const AdminLayout: React.FC<PropsWithChildren<AdminLayoutProps>> = (props) => {
+const AdminLayout: React.FC<PropsWithChildren<AdminLayoutProps>> = ({
+  children,
+  isMargin = true,
+}) => {
   return (
-    <main className='flex bg-gray-50'>
+    <main className="flex bg-gray-50">
       <Dashboard />
-      <div className='flex flex-col flex-grow w-full pb-14 relative min-h-screen overflow-x-hidden'>
+      <div
+        className={`flex flex-col flex-grow w-full ${
+          isMargin ? "pb-10" : ""
+        } relative min-h-screen overflow-x-hidden`}
+      >
         {/* <div className="flex items-center justify-between p-5 px-10 bg-secondary/20">
           <p className="font-semibold text-xl text-primary">Saha Sheikh Abubakr Egypt</p>
         </div> */}
-        <div className='p-10 px-14'>{props.children}</div>
+        <div className={` ${isMargin ? "p-10 px-14" : ""}`}>{children}</div>
         {/* <Footer /> */}
       </div>
     </main>
